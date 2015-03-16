@@ -1,0 +1,179 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'search',
+1 verbose cli   'pusher' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 silly mapToRegistry name -/all
+5 silly mapToRegistry using default registry
+6 silly mapToRegistry registry https://registry.npmjs.org/
+7 silly mapToRegistry uri https://registry.npmjs.org/-/all
+8 info updateIndex /Users/Ken/.npm/registry.npmjs.org/-/all/.cache.json
+9 warn Building the local index for the first time, please be patient
+10 verbose request uri https://registry.npmjs.org/-/all
+11 verbose request no auth needed
+12 info attempt registry request try #1 at 8:45:29 PM
+13 verbose request id 613608e089a19d57
+14 http request GET https://registry.npmjs.org/-/all
+15 http 503 https://registry.npmjs.org/-/all
+16 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+16 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+16 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+16 verbose bad json <html>
+16 verbose bad json   <head>
+16 verbose bad json     <title>503 backend read error</title>
+16 verbose bad json   </head>
+16 verbose bad json   <body>
+16 verbose bad json     <h1>Error 503 backend read error</h1>
+16 verbose bad json     <p>backend read error</p>
+16 verbose bad json     <h3>Guru Mediation:</h3>
+16 verbose bad json     <p>Details: cache-lcy1132-LCY 1426538744 1627648567</p>
+16 verbose bad json     <hr>
+16 verbose bad json     <p>Varnish cache server</p>
+16 verbose bad json   </body>
+16 verbose bad json </html>
+17 error registry error parsing json
+18 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+18 info retry
+18 info retry <?xml version="1.0" encoding="utf-8"?>
+18 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+18 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+18 info retry <html>
+18 info retry   <head>
+18 info retry     <title>503 backend read error</title>
+18 info retry   </head>
+18 info retry   <body>
+18 info retry     <h1>Error 503 backend read error</h1>
+18 info retry     <p>backend read error</p>
+18 info retry     <h3>Guru Mediation:</h3>
+18 info retry     <p>Details: cache-lcy1132-LCY 1426538744 1627648567</p>
+18 info retry     <hr>
+18 info retry     <p>Varnish cache server</p>
+18 info retry   </body>
+18 info retry </html>
+19 info attempt registry request try #2 at 8:45:54 PM
+20 http request GET https://registry.npmjs.org/-/all
+21 http 503 https://registry.npmjs.org/-/all
+22 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+22 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+22 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+22 verbose bad json <html>
+22 verbose bad json   <head>
+22 verbose bad json     <title>503 backend read error</title>
+22 verbose bad json   </head>
+22 verbose bad json   <body>
+22 verbose bad json     <h1>Error 503 backend read error</h1>
+22 verbose bad json     <p>backend read error</p>
+22 verbose bad json     <h3>Guru Mediation:</h3>
+22 verbose bad json     <p>Details: cache-ams4147-AMS 1426538770 1086177863</p>
+22 verbose bad json     <hr>
+22 verbose bad json     <p>Varnish cache server</p>
+22 verbose bad json   </body>
+22 verbose bad json </html>
+23 error registry error parsing json
+24 info retry will retry, error on last attempt: SyntaxError: Unexpected token <
+24 info retry
+24 info retry <?xml version="1.0" encoding="utf-8"?>
+24 info retry <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+24 info retry  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+24 info retry <html>
+24 info retry   <head>
+24 info retry     <title>503 backend read error</title>
+24 info retry   </head>
+24 info retry   <body>
+24 info retry     <h1>Error 503 backend read error</h1>
+24 info retry     <p>backend read error</p>
+24 info retry     <h3>Guru Mediation:</h3>
+24 info retry     <p>Details: cache-ams4147-AMS 1426538770 1086177863</p>
+24 info retry     <hr>
+24 info retry     <p>Varnish cache server</p>
+24 info retry   </body>
+24 info retry </html>
+25 info attempt registry request try #3 at 8:47:10 PM
+26 http request GET https://registry.npmjs.org/-/all
+27 http 503 https://registry.npmjs.org/-/all
+28 verbose bad json <?xml version="1.0" encoding="utf-8"?>
+28 verbose bad json <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+28 verbose bad json  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+28 verbose bad json <html>
+28 verbose bad json   <head>
+28 verbose bad json     <title>503 backend read error</title>
+28 verbose bad json   </head>
+28 verbose bad json   <body>
+28 verbose bad json     <h1>Error 503 backend read error</h1>
+28 verbose bad json     <p>backend read error</p>
+28 verbose bad json     <h3>Guru Mediation:</h3>
+28 verbose bad json     <p>Details: cache-lcy1129-LCY 1426538845 3186976950</p>
+28 verbose bad json     <hr>
+28 verbose bad json     <p>Varnish cache server</p>
+28 verbose bad json   </body>
+28 verbose bad json </html>
+29 error registry error parsing json
+30 verbose headers { date: 'Mon, 16 Mar 2015 20:47:25 GMT',
+30 verbose headers   server: 'Varnish',
+30 verbose headers   'retry-after': '0',
+30 verbose headers   'content-type': 'text/html; charset=utf-8',
+30 verbose headers   'content-length': '448',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   'x-served-by': 'cache-lcy1129-LCY',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1426538830.269962,VS0,VE14998',
+30 verbose headers   connection: 'close' }
+31 verbose stack SyntaxError: Unexpected token <
+31 verbose stack
+31 verbose stack <?xml version="1.0" encoding="utf-8"?>
+31 verbose stack <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+31 verbose stack  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+31 verbose stack <html>
+31 verbose stack   <head>
+31 verbose stack     <title>503 backend read error</title>
+31 verbose stack   </head>
+31 verbose stack   <body>
+31 verbose stack     <h1>Error 503 backend read error</h1>
+31 verbose stack     <p>backend read error</p>
+31 verbose stack     <h3>Guru Mediation:</h3>
+31 verbose stack     <p>Details: cache-lcy1129-LCY 1426538845 3186976950</p>
+31 verbose stack     <hr>
+31 verbose stack     <p>Varnish cache server</p>
+31 verbose stack   </body>
+31 verbose stack </html>
+31 verbose stack
+31 verbose stack     at Object.parse (native)
+31 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:205:23)
+31 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:178:14)
+31 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/request/request.js:373:22)
+31 verbose stack     at Request.emit (events.js:110:17)
+31 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/request/request.js:1318:14)
+31 verbose stack     at Request.emit (events.js:129:20)
+31 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/node_modules/request/request.js:1266:12)
+31 verbose stack     at IncomingMessage.emit (events.js:129:20)
+31 verbose stack     at _stream_readable.js:908:16
+32 verbose cwd /Users/Ken/repos/mine/aws-pusher/docs
+33 error Darwin 14.1.0
+34 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "search" "pusher"
+35 error node v0.12.0
+36 error npm  v2.5.1
+37 error Unexpected token <
+37 error
+37 error <?xml version="1.0" encoding="utf-8"?>
+37 error <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+37 error  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+37 error <html>
+37 error   <head>
+37 error     <title>503 backend read error</title>
+37 error   </head>
+37 error   <body>
+37 error     <h1>Error 503 backend read error</h1>
+37 error     <p>backend read error</p>
+37 error     <h3>Guru Mediation:</h3>
+37 error     <p>Details: cache-lcy1129-LCY 1426538845 3186976950</p>
+37 error     <hr>
+37 error     <p>Varnish cache server</p>
+37 error   </body>
+37 error </html>
+38 error If you need help, you may report this error at:
+38 error     <http://github.com/npm/npm/issues>
+39 verbose exit [ 1, true ]
