@@ -28,7 +28,8 @@ The *aws-pusher* application is available as a CLI application to start with the
 		- Tests that specified "origin" is up and ready (warning only if not)
 		> Note: EC2 is ignored unless configuration is specified; automation is strictly for static asset deployment
 	- **Route53**
-		- All 
+		- Validates that root A-record for domain is established (errors out if it is not, not it's job to change this)
+		- Validates that all current cloudfront distributions are represented with sub-domain A-record in Route53
 
 2. `pusher push`
 
@@ -39,8 +40,8 @@ The *aws-pusher* application is available as a CLI application to start with the
 
 3. `pusher commit`
 
-	The "commit" is not typically meant to be run as part of the CLI but rather as a `post-commit` hook called by **git**. This ensures that whenever a 
-	`git push` is made that **pusher** has a chance to ensure AWS is up-to-date. That said, if the the status ever becomes 
+	The "commit" can be run as a CLI command but is more typically attached to git's `post-commit` hook. This ensures that whenever a 
+	`git push` is made that **pusher** has a chance to ensure AWS is up-to-date.
 
 
 ## Target Architecture
