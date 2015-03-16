@@ -1,14 +1,19 @@
 # AWS Pusher
-> automated deployments to an opinionated AWS  architecture
+> automated deployments to an opinionated AWS architecture
 
 ## Overview and Installation
 The goal of this component is to aid in the deployment to a cost-effective, test-effective, and fully automated deployment process for people who use AWS as their production (and test-prod) architecture. This solution is available on **npm** and can be installed with:
 
 ````bash
 npm install -g aws-pusher
+pusher init
 ````
 
 The *aws-pusher* application is available as a CLI application to start with the following commands:
+
+1. `pusher init`
+	
+	- run after installation, sets up the AWS environment
 
 1. `pusher status`
 
@@ -42,6 +47,12 @@ The *aws-pusher* application is available as a CLI application to start with the
 
 	The "commit" can be run as a CLI command but is more typically attached to git's `post-commit` hook. This ensures that whenever a 
 	`git push` is made that **pusher** has a chance to ensure AWS is up-to-date.
+
+### Ember Awareness ###
+
+This tooling is meant to deploy static assets to an opinionated AWS architecture *regardless* of the underlying static site's technology. That said, over time 
+it will be helpful for the `pusher push` command to understand how to plug into the static assets build pipeline. For Ember applications the tool will be ready
+out of the box for apps which use ember-cli.
 
 
 ## Target Architecture
