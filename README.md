@@ -46,3 +46,7 @@ The *aws-pusher* application is available as a CLI application to start with the
 
 ## Target Architecture
 ![ ](docs/images/aws-architecture.png)
+
+## DNS Endpoints
+
+![ ](docs/images/dns-endpoints.png)
