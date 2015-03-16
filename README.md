@@ -5,7 +5,9 @@
 The goal of this component is to aid in the deployment to a cost-effective, test-effective, and fully automated deployment process for people who use AWS as their production (and test-prod) architecture. This solution is available on **npm** and can be installed with:
 
 ````bash
+# Install globally
 npm install -g aws-pusher
+# initialize your project (from within project directory)
 pusher init
 ````
 
@@ -51,8 +53,8 @@ The *aws-pusher* application is available as a CLI application to start with the
 ### Ember Awareness ###
 
 This tooling is meant to deploy static assets to an opinionated AWS architecture *regardless* of the underlying static site's technology. That said, over time 
-it will be helpful for the `pusher push` command to understand how to plug into the static assets build pipeline. For Ember applications the tool will be ready
-out of the box for apps which use ember-cli.
+it will be helpful for the `pusher push` command to understand how to plug into the static assets build pipeline. To kick of this contextual awareness, the 
+aws-pusher will come with out of the box support for [Ember apps](http://emberjs.com) which use [ember-cli](http://ember-cli.com).
 
 
 ## Target Architecture
