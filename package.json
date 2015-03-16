@@ -1,0 +1,29 @@
+{
+  "name": "aws-pusher",
+  "version": "0.0.1",
+  "description": "automated deployments to an opinionated AWS architecture",
+  "main": "pusher.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jshint pusher.js && mocha tests.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifegadget/aws-pusher.git"
+  },
+  "keywords": [
+    "aws",
+    "devops",
+    "deployment",
+    "ember"
+  ],
+  "author": "Ken Snyder <ken@ken.net> (http://ken.net/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lifegadget/aws-pusher/issues"
+  },
+  "homepage": "https://github.com/lifegadget/aws-pusher"
+}

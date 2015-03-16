@@ -1,0 +1,3 @@
+#!/bin/bash
+### To be installed for a project this script must be installed to a project's ".git/hooks/post-commit" directory
+### this process should happen automatically as part of the "pusher init" command
