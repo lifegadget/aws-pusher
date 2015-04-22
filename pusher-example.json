@@ -3,7 +3,27 @@
     "primaryDomain": {
         "wwwUsed": true,
         "wwwIsPrimary": false, 
-        "fqRootDns": "my-app.io",
+        "fqRootDns": "my-app.io"
+    },
+    "secondaryDomains": {
+        "tags": {
+            "enabled": true,
+            "dnsOffset": "tags",
+            "whitelist": "$[regex]^",
+            "blacklist": null
+        },
+        "releases": {
+            "enabled": true,
+            "dnsOffset": "tags",
+            "whitelist": "$[regex]^",
+            "blacklist": null
+        },
+        "commits": {
+            "enabled": true,
+            "dnsOffset": "tags",
+            "whitelist": "$[regex]^",
+            "blacklist": null
+        }
     },
     "pipelines": {
         "init": [
