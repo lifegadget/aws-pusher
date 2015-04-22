@@ -43,7 +43,7 @@ The *aws-pusher* application is available as a CLI application to start with the
 	The "push" command responds to a user request to build and deploy the users current *sandboxed* code to AWS. 
 
 	> **Note**: in order for this to be fully automated the *pusher* configuration will need to first build the latest version of the code and *then* push it to 
-	to the 
+	to the AWS architecture. This requires that either the static framework is known (for now just Ember) or that the pusher configuration provides a hook to allow 
 
 3. `pusher commit`
 
@@ -63,3 +63,61 @@ aws-pusher will come with out of the box support for [Ember apps](http://emberjs
 ## DNS Endpoints
 
 ![ ](docs/images/dns-endpoints.png)
+
+## S3 ##
+
+
+### Bucket Policy ###
+
+````json
+{
+	"Version": "2008-10-17",
+	"Statement": [
+		{
+			"Sid": "Allow Public Access to All Objects",
+			"Effect": "Allow",
+			"Principal": {
+				"AWS": "*"
+			},
+			"Action": "s3:GetObject",
+			"Resource": "arn:aws:s3:::teamfitness.co/*"
+		}
+	]
+}
+````
+
+### Permissions ###
+
+![ ](docs/images/s3-permissions.png)
+
+### Redirects ###
+
+Hosting the same site off of `http://WWW.site.com` *and* `http://site.com` is not good for your SEO juju so you'll want to redirect. Is that a problem? Nope. But it may be a surprise that this happens at the S3 level rather than Route53. Whether you decide to force the 'www' or lose it make very little difference, this example will assume that the redirection will be done toward *removing* the 'www':
+
+1. Create a S3 bucket called 'www.site.com', then configure it like so:
+
+	![ ](docs/images/s3-redirection.png)
+
+2. Now go to **Route53** and create a A record (as an Alias) which points to your "Endpoint" defined for your new bucket. 
+
+	![ ](docs/images/route53-Arecord.png)	
+
+All done.
+
+## GZIP
+
+The pusher script is going to push all your CSS and JS files with a content-type of 'gzip'. That is good. Your ember build is going to produce CSS and JS that are *not* gzipped. That is bad. Problem solved:
+
+````bash
+ember install:addon ember-cli-gzip
+````
+
+And then modify your Brocfile:
+
+````js
+var app = new EmberApp({
+	gzip: {
+		appendSuffix: false
+	}
+});
+````
