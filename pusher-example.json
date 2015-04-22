@@ -1,0 +1,26 @@
+{
+    "name": "my-app",
+    "primaryDomain": {
+        "wwwUsed": true,
+        "wwwIsPrimary": false, 
+        "fqRootDns": "my-app.io",
+    },
+    "pipelines": {
+        "init": [
+            "project-detect",
+            "user-interact",
+            "save-config"
+        ],
+        "aws-init": [
+            "iam-inspect",
+            "iam-config",
+            "s3-inspect",
+            "s3-config-primary",
+            "s3-config-secondary",
+            "cloudfront-inspect",
+            "cloudfront-config",
+            "route53-inspect",
+            "route53-config"
+        ]
+    }
+}

@@ -17,8 +17,8 @@ The *aws-pusher* application is available as a CLI application to start with the
 	
     - run once (or at least *rarely*)
     - Executes two pipelines:
-        - **config** Pipeline: sets configuration for your project's deployment and stores to `pusher.json` in project root
-        - **aws-init** Pipeline: initializes various AWS architecture components to work with deployments based on `pusher.json`
+        - **config** Pipeline: sets configuration for your project's deployment and stores to [`pusher.json`](pusher-example.json) in project root
+        - **aws-init** Pipeline: initializes various AWS architecture components to work with deployments based on [`pusher.json`](pusher-example.json)
 
 1. `pusher status`
 
