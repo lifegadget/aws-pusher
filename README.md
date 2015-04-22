@@ -93,6 +93,10 @@ aws-pusher will come with out of the box support for [Ember apps](http://emberjs
 }
 ````
 
+### Proposed Directory Structure ###
+
+![ ](docs/images/directory-structure.png)
+
 ### Permissions ###
 
 ![ ](docs/images/s3-permissions.png)
