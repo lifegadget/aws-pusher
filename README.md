@@ -57,6 +57,11 @@ The *aws-pusher* application is available as a CLI application to start with the
 	The "commit" can be run as a CLI command but is more typically attached to git's `post-commit` hook. This ensures that whenever a 
 	`git push` is made that **pusher** has a chance to ensure AWS is up-to-date.
 
+3. `pusher addon`
+
+	This will dynamically install a dependency into the global CLI so that its functionality (imagined to mainly be additional pipeline tasks). This command would not be available day one but supports the idea of providing future extensibility.
+
+
 ### Ember Awareness ###
 
 This tooling is meant to deploy static assets to an opinionated AWS architecture *regardless* of the underlying static site's technology. That said, over time 
