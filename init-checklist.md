@@ -1,6 +1,6 @@
-# INIT Checklist
+# INIT Pipeline Checklist
 
-> Tasks that could/should be done within the INIT task
+> Tasks that could/should be done within the INIT pipeline task
 
 ## IAM
 - **User Exists**. Check that identified IAM user from config exists, create if doesn't

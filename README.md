@@ -11,11 +11,14 @@ npm install -g aws-pusher
 pusher init
 ````
 
-The *aws-pusher* application is available as a CLI application to start with the following commands:
+The *aws-pusher* application is available as a CLI application to start with the following pipeline commands:
 
 1. [`pusher init`](init-checklist.md)
 	
-	- run after installation, sets up the AWS environment
+    - run once (or at least *rarely*)
+    - Executes two pipelines:
+        - **config** Pipeline: sets configuration for your project's deployment and stores to `pusher.json` in project root
+        - **aws-init** Pipeline: initializes various AWS architecture components to work with deployments based on `pusher.json`
 
 1. `pusher status`
 
@@ -80,7 +83,7 @@ aws-pusher will come with out of the box support for [Ember apps](http://emberjs
 				"AWS": "*"
 			},
 			"Action": "s3:GetObject",
-			"Resource": "arn:aws:s3:::teamfitness.co/*"
+			"Resource": "arn:aws:s3:::[your-site.com]/*"
 		}
 	]
 }
