@@ -8,19 +8,19 @@
     "secondaryDomains": {
         "tags": {
             "enabled": true,
-            "dnsOffset": "tags",
+            "dnsOffset": "tag",
             "whitelist": "$[regex]^",
             "blacklist": null
         },
         "releases": {
             "enabled": true,
-            "dnsOffset": "tags",
+            "dnsOffset": "release",
             "whitelist": "$[regex]^",
             "blacklist": null
         },
         "commits": {
             "enabled": true,
-            "dnsOffset": "tags",
+            "dnsOffset": "commit",
             "whitelist": "$[regex]^",
             "blacklist": null
         }
@@ -41,6 +41,10 @@
             "cloudfront-config",
             "route53-inspect",
             "route53-config"
+        ],
+        "etc": [
+            "something",
+            "something-else"
         ]
     }
 }
