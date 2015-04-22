@@ -22,7 +22,11 @@ The *aws-pusher* application is available as a CLI application to start with the
 
 1. `pusher status`
 
-	This will give a status of your current app deployments to AWS, including:
+    - gives status on the current AWS environment that is relevant for this project
+    - this consists of running the **deployment-status** pipeline
+    - while in the future this pipeline would be completely configurable, in its initial incarnation it would assume an opinionated S3-Cloudfront-Route53 AWS architecture
+
+	The kind of information that would be provided to the user would include:
 
 	- **S3 Structure**
 		- Does an S3 bucket/folder exist for your current sandbox? For the tagged releases? For the last *x* pushes?
