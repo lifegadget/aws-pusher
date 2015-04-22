@@ -13,7 +13,7 @@ pusher init
 
 The *aws-pusher* application is available as a CLI application to start with the following commands:
 
-1. `pusher init`
+1. [`pusher init`](init-checklist.md)
 	
 	- run after installation, sets up the AWS environment
 
