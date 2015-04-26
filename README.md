@@ -1,6 +1,8 @@
 # AWS Pusher
 > automated deployments to an opinionated AWS architecture
 
+![ ](docs/images/cli.png)
+
 ## Overview and Installation
 The goal of this component is to aid in the deployment to a cost-effective, test-effective, and fully automated deployment process for people who use AWS as their production (and test-prod) architecture. This solution is available on **npm** and can be installed with:
 
