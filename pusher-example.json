@@ -1,9 +1,8 @@
 {
     "name": "my-app",
     "primaryDomain": {
-        "wwwUsed": true,
-        "wwwIsPrimary": false, 
-        "fqRootDns": "my-app.io"
+        "wwwStrategy": "www-redirect", 
+        "baseURL": "my-app.io"
     },
     "secondaryDomains": {
         "tags": {

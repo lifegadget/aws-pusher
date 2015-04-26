@@ -1,7 +1,9 @@
+#!/usr/bin/env node
+'use strict';
 // External Dependencies
 var fs = require('fs');
 var path = require('path');
-var debug = require('debug')('pusher-cli');
+var debug = require('debug')('pusher');
 var chalk = require('chalk');
 var cli = require('commander');
 var findup = require('findup-sync');
@@ -89,22 +91,21 @@ cli
 
 function executePipeline(pipeline, options) {
   pipeline = pusherConfig.pipeline[pipeline];
-  var context = {};
   var task = null;
-  var previous = [];
+  var context = {};
   var config = {
     pusher: pusherConfig,
     npm: npmConfig
   };
   pipeline.forEach(function(item) {
     task = require('./pipeline/' + item );
-    previous = task.run(previous, config, options);
-  })
+    context = task.run(context, config, options);
+  });
 }
 
 cli.parse(process.argv);
 
 debug('ARGV[%s]: %o',process.argv.length, process.argv);
-if(process.argv.length == 2) {
+if(process.argv.length === 2) {
   cli.help();
 }
